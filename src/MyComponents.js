@@ -1,21 +1,31 @@
 import './App.css';
 import axios from 'axios';
-import  useEffect  from 'react';
+import  {useEffect,useState}  from 'react';
+import fetch from 'cross-fetch';
+
 
 function ControlCenter(props){
 
+    function manageClick (url) {
+
+        axios.get('http://127.0.0.1:8080/' + url ).catch()
     
+    }
+
 
     if(props.area_clicked === 'cocina'){
         return (
+            <div className='container' style={{backgroundColor:'white'}}>
+            <br/>
             <div>
-            <div className = 'container'>
-                <button className = 'box' onClick={() => alert('subiendo!')}>Subir</button>
-                <button className = 'box' onClick = {() => alert("subiendo!")}>Subir</button>
+                <button className = 'box' onClick = {() => manageClick('roller_1_up')}>Subir</button>
+                <br/>
+                <button className = 'box' onClick = {() => manageClick('roller_1_down')}>Bajar</button>
             </div>
-            <div className = 'container'>
-                <button className = 'box' onClick = {() => alert("Bajando!")}>Bajar</button>
-                <button className = 'box' onClick = {() => alert("Bajando!")}>Bajar</button>
+            <div>
+                <button className = 'box' onClick = {() => manageClick('roller_2_up')}>Subir</button>
+                <br/>
+                <button className = 'box' onClick = {() => manageClick('roller_2_down')}>Bajar</button>
             </div>
             </div>
         );
