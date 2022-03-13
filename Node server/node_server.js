@@ -7,6 +7,8 @@ const port = 8080;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   manage_req(req);
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.end();
 });
 
@@ -17,8 +19,8 @@ server.listen(port, hostname, () => {
 function manage_req(req){
   
   console.log(req.url);
-  fetch('http://192.168.0.184:80' + req.url).then(console.log).catch(err=>{console.log(err)});
-
+  fetch('http://192.168.0.184:80' + req.url).then(console.log).catch(err => console.log(err));
+ 
 }
 
 

@@ -1,14 +1,14 @@
 import './App.css';
 import axios from 'axios';
-import  {useEffect,useState}  from 'react';
-import fetch from 'cross-fetch';
 
 
 function ControlCenter(props){
 
     function manageClick (url) {
 
-        axios.get('http://127.0.0.1:8080/' + url ).catch()
+        const api = axios.create({baseURL: '//192.168.0.184:80'});
+
+        api.get(url ).catch(console.log)
     
     }
 
@@ -17,13 +17,19 @@ function ControlCenter(props){
         return (
             <div className='container' style={{backgroundColor:'white'}}>
             <br/>
-            <div>
+            <div className='roller-container'>
+                <h1 style={{fontSize:'2vh', color:'white'}}>Cortina Puerta</h1>
                 <button className = 'box' onClick = {() => manageClick('roller_1_up')}>Subir</button>
+                <br/>
+                <button className = 'box' style={{width: '15vh',backgroundColor:'red'}} onClick = {() => manageClick('stop')}>PARAR</button>
                 <br/>
                 <button className = 'box' onClick = {() => manageClick('roller_1_down')}>Bajar</button>
             </div>
-            <div>
+            <div className='roller-container'>
+                <h1 style={{fontSize:'2vh', color:'white'}}>Cortina Ventana</h1>
                 <button className = 'box' onClick = {() => manageClick('roller_2_up')}>Subir</button>
+                <br/>
+                <button className = 'box' style={{width: '15vh',backgroundColor:'red'}} onClick = {() => manageClick('stop')}>PARAR</button>
                 <br/>
                 <button className = 'box' onClick = {() => manageClick('roller_2_down')}>Bajar</button>
             </div>
@@ -45,8 +51,6 @@ function AppBar(props){
     return(
         <div className='container'>
             <button className='box' onClick = {() => manageClick('cocina')}>Cocina</button>
-            <button className='box' onClick = {() => manageClick('sum')}>Sum</button>
-            <button className='box' onClick = {() => manageClick('climatizacion')}>Climatizacion</button>            
         </div>
 
            

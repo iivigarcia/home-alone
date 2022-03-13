@@ -10,6 +10,7 @@ function App() {
     
     <div className="App">
       <AppBar area_clicked = {area_clicked} setAreaClicked = {setAreaClicked}/>
+      <br/>
       <ControlCenter area_clicked = {area_clicked}/>
     </div>
   );
