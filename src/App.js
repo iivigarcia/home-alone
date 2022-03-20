@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {AppBar,ControlCenter} from './MyComponents';
+import {TopBar, AppBar,ControlCenter} from './MyComponents';
 import { useState,setState } from 'react';
 
 function App() {
@@ -8,9 +8,9 @@ function App() {
   
   return (
     
-    <div className="App">
+    <div className = "App">
+      <TopBar/>
       <AppBar area_clicked = {area_clicked} setAreaClicked = {setAreaClicked}/>
-      <br/>
       <ControlCenter area_clicked = {area_clicked}/>
     </div>
   );

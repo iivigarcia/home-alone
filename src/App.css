@@ -2,11 +2,26 @@
   text-align: center;
 }
 
+.Mybutton {
+  background:url('/public/arrow_up.png') no-repeat;
+  background-size:contain;
+  height:20vh;width:20vh;
+  border: none;
+  vertical-align:middle;  
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+}
+.Mybutton:hover {
+  opacity: 40%;
+}
 .Top-bar {
   height: 20vmin;
   background-color: black;
-  margin-bottom: 15px;
-  justify-content: space-between;
+  margin-top: 15px;
+  margin-left: 15px;
+  float: left;
+  align-items: flex-start;
   
 }
 .box {
@@ -21,6 +36,7 @@
   font-size: 3vh;  
   background-color: #000000;
   opacity: 100%;
+   
 
 
 }
@@ -33,16 +49,20 @@
   flex-direction: row;
   justify-content: space-around;
   background-color: #000000;
+  margin-top: 15px;
   font-size: 32px;
   min-height: 10vh;
   min-width: 100vh;
 }
 
+html {
+  background-color: black
+}
+
 .roller-container{
   align-content:center;
-  
-  background-color: #000000;
-  border-radius: 15%;
+  background: rgba(127, 131, 138, 0.1);
+  border-radius: 5%;
   vertical-align: middle;
   font-size: 10vh;
   min-height: auto;
