@@ -25,23 +25,23 @@ function ControlCenter(props){
             <div className = 'container' >
                 <div className = 'roller-container' >
                     
-                    <h1 style = {{fontSize:'2vh', color:'white'}}>Cortina Puerta</h1>
+                    <h1 style = {{fontSize:'2vh', color:'white'}}> CORTINA PUERTA </h1>
                     <button className = 'Mybutton'   alt = 'flecha arriba' onClick = {() => manageClick('roller_1_up')}/>
                     
-                <br/>
-                <button className = 'Mybutton'  style={{background:'url(./stop.png) no-repeat', backgroundSize:'contain'}} alt = 'stop' onClick = {() => manageClick('stop')}/>
-                <br/>
-                    <button className = 'Mybutton'  style={{background:'url(./arrow_down.png) no-repeat', backgroundSize:'contain'}} alt = 'flecha abajo' onClick = {() => manageClick('roller_1_down')}/>
+                    <br/>
+                    <button className = 'Mybutton'  style={{background:'url(./stop.png) no-repeat', backgroundSize:'contain'}} alt = 'stop' onClick = {() => manageClick('stop')}/>
+                    <br/>
+                        <button className = 'Mybutton'  style={{background:'url(./arrow_down.png) no-repeat', backgroundSize:'contain'}} alt = 'flecha abajo' onClick = {() => manageClick('roller_1_down')}/>
                 </div>
                 <div className='roller-container'>
-                    <h1 style={{fontSize:'2vh', color:'white'}}>Cortina Ventana</h1>
+                    <h1 style={{fontSize:'2vh', color:'white'}}>CORTINA VENTANA</h1>
                         <button className = 'Mybutton'   alt = 'flecha arriba' onClick = {() => manageClick('roller_2_up')}/>
                     
                     <br/>
                         <button className = 'Mybutton'  style={{background:'url(./stop.png) no-repeat', backgroundSize:'contain'}} alt = 'stop' onClick = {() => manageClick('stop')}/>
                     <br/>
                         <button className = 'Mybutton'  style={{background:'url(./arrow_down.png) no-repeat', backgroundSize:'contain'}} alt = 'flecha abajo' onClick = {() => manageClick('roller_2_down')}/>
-                    </div>
+                </div>
             </div>
         );
     }
@@ -58,8 +58,8 @@ function AppBar(props){
         }
     }
     return(
-        <div className='container'>
-            <button className='box' onClick = {() => manageClick('cocina')}>Cocina</button>
+        <div className = 'container'>
+            <button className = 'box' onClick = {() => manageClick('cocina')}> Cocina </button>
         </div>
 
            

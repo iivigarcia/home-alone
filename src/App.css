@@ -31,8 +31,9 @@
   height: 5vh;
   width: 15vh;
   color: white;
+  border-color: #201c1c;
   text-align: center;
-  border-radius: 10vh;
+  border-radius: 5px;
   font-size: 3vh;  
   background-color: #000000;
   opacity: 100%;
