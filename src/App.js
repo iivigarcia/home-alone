@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import {TopBar, AppBar,ControlCenter} from './MyComponents';
+import {TopBar, AppBar,ControlCenter} from './Components';
 import { useState,setState } from 'react';
 
 function App() {

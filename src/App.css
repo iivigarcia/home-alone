@@ -1,6 +1,20 @@
+*::before, *::after{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .App {
   text-align: center;
 }
+
+.grid{
+  
+  display:grid;
+  
+  grid-template-columns: 
+    repeat(auto-fit,minmax(100%,1fr));
+}
+
+
 
 .Mybutton {
   background:url('/public/arrow_up.png') no-repeat;
@@ -17,27 +31,165 @@
 }
 .Top-bar {
   height: 20vmin;
-  background-color: black;
+  background-color: #333;
   margin-top: 15px;
   margin-left: 15px;
   float: left;
   align-items: flex-start;
   
 }
+
+.roller-container .individual{
+  
+  background: white;
+  color: #333;  
+  align-items: center;
+  font-size: .5em;
+  margin-top: 0;
+  margin-left: 3em;
+  padding: 1.5em;  
+  border-radius: .25rem;
+  flex-direction: row;
+}
+
+.roller-container .individual a:hover{
+  opacity: 75%;
+}
+
+.roller-container .text{
+  font-size: 1.5em;
+}
+
+.roller-container .icon{
+  fill: currentColor;
+  width: 9em;
+  height: 8em;
+  transition: opacity 500ms;
+}
+
+
+.roller-container .stop-icon{
+  fill: currentColor;
+  width: 9em;
+  height: 9em;
+  transform: translate(.1em,0);
+  transition: opacity 500ms;
+}
+
+.roller-container{
+  background-color: #333;
+  border-radius: .25rem;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  transform: translate(-1em,0);
+
+}
+
+.list-roller{
+  display: flex;
+  margin: 0;
+  padding: 2em;
+  list-style: none;
+  
+  }
+
+.navbar-container{
+  background-color: white;
+  border-radius: .25rem;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.list{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list a{
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.list .icon:hover{
+  opacity: 70%;
+}
+
+
+.list .icon{
+  fill: currentColor;
+  width: 4em;
+  height: 4em;
+  opacity: 100%;
+}
+
+
+
+.list .text{
+  font-size: .8em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms;
+  
+}
+
+.list:hover .text {
+  opacity: 1;
+}
+
+
+
+
+.hour-container{
+  max-width: 70vh;
+  padding-top: 1em;
+  margin: 0 auto;
+  align-items: center;
+}
+.hour-button{
+  
+  margin: 1vh;
+  height: 10vh;
+  width: 15vh;
+  color: white;
+  border-radius: .25rem;
+  border-color: transparent;
+  text-align: center;
+  font-size: 3vh;  
+  opacity: 100%; 
+
+
+}
+
+.hour-button:hover{
+  opacity:70%;
+}
 .box {
   
   margin-left: 10%;
   margin-right: 10%;
   height: 5vh;
-  width: 15vh;
+  width: auto;
   color: white;
   border-color: #201c1c;
   text-align: center;
   border-radius: 5px;
   font-size: 3vh;  
   background-color: #000000;
-  opacity: 100%;
-   
+  opacity: 100%; 
 
 
 }
@@ -57,18 +209,9 @@
 }
 
 html {
-  background-color: black
+  background-color: #333
 }
 
-.roller-container{
-  align-content:center;
-  background: rgba(127, 131, 138, 0.1);
-  border-radius: 5%;
-  vertical-align: middle;
-  font-size: 10vh;
-  min-height: auto;
-  min-width: 25vh;
-}
 
 .button {
   background-color: #4CAF50; /* Green */
@@ -80,6 +223,8 @@ html {
   display: inline-block;
   font-size: 40px;
 }
+
+
 
 .h1{
   font-size: 10vmin;
@@ -99,7 +244,7 @@ html {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
