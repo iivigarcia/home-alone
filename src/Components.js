@@ -158,7 +158,7 @@ function AppBar(props){
             <ul className = 'list'>
             {rooms.map(function(room){
                 return(
-                <li><a href="/#"  onClick = {() => manageClick(room.name)}>
+                <li><a href="/#"  key={room.id} onClick = {() => manageClick(room.name)}>
                 <div className='icon'>
                     < NavBarIcon name = {room.name}/>
                 </div>
